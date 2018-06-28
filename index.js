@@ -1,9 +1,10 @@
 const images = document.querySelectorAll(".images");
 const pagers = document.querySelectorAll(".banner-pager-item");
+const banner = document.querySelector("#banner-inner");
 
 /*let t;
 let n = 0;
-const banner = document.querySelector("#banner-inner");
+
 
 for (let i = 0; i < pagers.length; i++) {
     pagers[i].onclick = function () {
@@ -73,21 +74,22 @@ let next = 0;
 t = setInterval(move, 3000);
 
 function move() {
-
+    next=now + 1;
+    if (next === pagers.length) {
+        next = 0;
+    }
     for (let i = 0; i < pagers.length; i++) {
         pagers[i].classList.remove("active");
     }
-    pagers[now].classList.add("active");
-    if (now < next) {
-        images[now].classList.add("leftOut");
-        images[next].classList.add("leftIn");
-    } else if (now > next) {
-        images[now].classList.add("rightOut");
-        images[next].classList.add("rightIn");
-    }
-
-    next++;
-    now = next;
-
+    pagers[next].classList.add("active");
+    images[now].classList.add("leftOut");
+    images[next].classList.add("leftIn");
+    images[next].style.zIndex=z++;
+    now=next;
 }
-
+banner.onmouseenter = function () {
+    clearInterval(t);
+};
+banner.onmouseleave = function () {
+    t = setInterval(move, 3000);
+};

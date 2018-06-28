@@ -257,7 +257,7 @@ body {
 }
 
 .leftIn {
-    animation: leftIn 3s linear;
+    animation: leftIn 2s linear;
 }
 
 @keyframes leftOut {
@@ -270,7 +270,7 @@ body {
 }
 
 .leftOut {
-    animation: leftOut 3s linear;
+    animation: leftOut 2s linear;
 }
 
 @keyframes rightIn {
@@ -283,7 +283,7 @@ body {
 }
 
 .rightIn {
-    animation: rightIn 3s linear;
+    animation: rightIn 2s linear;
 }
 
 @keyframes rightOut {
@@ -296,7 +296,7 @@ body {
 }
 
 .rightOut {
-    animation: rightOut 3s linear;
+    animation: rightOut 2s linear;
 }
 
 #banner-count {
